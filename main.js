@@ -125,7 +125,7 @@ function searchFilt() {
     const searchFiltArr = data.filter(item =>item.name.toLocaleLowerCase().includes(searchInp.value.toLocaleLowerCase()))
     searchFiltArr.map(item =>{
 
-        cardsCountry.innerHTML += `<div class="max-w-[290px]    shadow-md dark:bg-white dark:text-gray-900">
+        cardsCountry.innerHTML += `<div onclick="showDet('${item.alpha3Code}')"  class="cursor-pointer shadow-md dark:bg-white dark:text-gray-900">
                                         <img src="${item.flag}" alt="" class="object-cover object-center w-full  h-52 dark:bg-gray-500">
                                         <div class="mt-6 mb-2 px-4 pt-5">
                                             <span class="block text-xs font-medium tracking-widest uppercase ">${item.region}</span>
