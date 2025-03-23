@@ -63,7 +63,7 @@ function sjsj() {
                                 <p>Captial: ${obj.capital} </p>
                                 <p>Region: ${obj.region}</p>
                                 <p>Alternative names:${obj.altSpellings[1]} </p>
-                               <div class="flex">
+                               <div class="flex flex-wrap">
                                     ${obj.borders.map(item => `<div onclick="showDet('${item}')" class="cursor-pointer border px-2 py-1 mx-1">${item}</div>`).join("")}
                                 </div>
 
