@@ -46,6 +46,9 @@ function  printCards() {
 
 function showDet(alpha3Code) {
     // window.location.href = `http://127.0.0.1:5500/details.htm?id=${alpha3Code}`
+
+
+    
     window.location.href = `https://country-app-mu-sage.vercel.app/details.htm?id=${alpha3Code}`;
 
 }
@@ -61,11 +64,11 @@ function regionFilt(r, a) {
     console.log(filtregData);
     cardsCountry.innerHTML = ""
     filtregData.forEach(item =>{
-        cardsCountry.innerHTML += `<div onclick="showDet('${item.alpha3Code}')"  class="max-w-[290px] cursor-pointer   shadow-md dark:bg-white dark:text-gray-900">
+        cardsCountry.innerHTML += `<div onclick="showDet('${item.alpha3Code}')"  class="group max-w-[290px] cursor-pointer   shadow-md dark:bg-white dark:text-gray-900">
                                         <img src="${item.flag}" alt="" class="object-cover object-center w-full  h-52 dark:bg-gray-500">
                                         <div class="mt-6 mb-2 px-4 pt-5">
                                             <span class="block text-xs font-medium tracking-widest uppercase ">${item.region}</span>
-                                            <h2 class="text-xl font-semibold tracking-wide">${item.name}</h2>
+                                            <h2 class="text-xl font-semibold tracking-wide group-hover:underline">${item.name}</h2>
                                         </div>
                                         <div class=" px-4 flex justify-between text-xs pb-8">
                                             <p>Population: ${item.population}</p>
@@ -104,7 +107,7 @@ function scrollFnk() {
 
  function randCardFnk() {
     const randomobj = data[Math.floor(Math.random() * data.length)]
-    randCard.innerHTML = `  <div class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12  ">
+    randCard.innerHTML = `  <div onclick="showDet('${randomobj.alpha3Code}')" class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12  ">
                                 <a rel="noopener noreferrer" href="#" class="block max-w-sm gap-3 mx-auto sm:max-w-full group  hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-[#E5E7EB]">
                                     <img src="${randomobj.flag}" alt="" class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
                                     <div class="p-6 space-y-2 lg:col-span-5 shadow-md ">
@@ -144,7 +147,6 @@ function searchFilt() {
 }
 
 function showSearch() {
-    
     flag = !flag
     
     searchDiv.style.display = flag ? 'none' : 'initial'

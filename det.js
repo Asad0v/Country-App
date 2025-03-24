@@ -67,6 +67,8 @@ function sjsj() {
                                <div class="flex flex-wrap">
                                     ${obj.borders.map(item => `<div onclick="showDet('${item}')" class="cursor-pointer border px-2 py-1 mx-1">${item}</div>`).join("")}
                                 </div>
+                                <p>Population: ${obj.population}</p>
+                                            <p> ${obj.area} km <sup>2</sup></p>
 
                                 </div>
                                 <img src="${obj.flag}" alt="" class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
