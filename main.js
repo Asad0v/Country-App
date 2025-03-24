@@ -45,7 +45,9 @@ function  printCards() {
 
 
 function showDet(alpha3Code) {
-    window.location.href = `http://127.0.0.1:5500/details.htm?id=${alpha3Code}`
+    // window.location.href = `http://127.0.0.1:5500/details.htm?id=${alpha3Code}`
+    window.location.href = `https://country-app-mu-sage.vercel.app/details.htm?id=${alpha3Code}`;
+
 }
 
 
