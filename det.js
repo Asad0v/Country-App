@@ -68,7 +68,7 @@ function sjsj() {
                                     ${obj.borders.map(item => `<div onclick="showDet('${item}')" class="cursor-pointer border px-2 py-1 mx-1">${item}</div>`).join("")}
                                 </div>
                                 
-                                <div class="flex justify-between pt-4">
+                                <div class="flex justify-between pt-8">
                                     <p>Population: ${obj.population}</p>
                                     <p> ${obj.area} km <sup>2</sup></p>
                                 </div>
